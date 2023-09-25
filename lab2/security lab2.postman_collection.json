@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "4f40fa8d-5ccb-4166-a07f-3cd3c6196f87",
+		"name": "security lab2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18988104"
+	},
+	"item": [
+		{
+			"name": "https://kpi.eu.auth0.com/oauth/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "audience",
+							"value": "https://kpi.eu.auth0.com/api/v2/",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "JIvCO5c2IBHlAe2patn6l6q5H35qxti0",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "ZRF8Op0tWM36p1_hxXTU-B0K_Gq_-eAVtlrQpY24CasYiDmcXBhNS6IJMNcz1EgB",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://kpi.eu.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"kpi",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://kpi.eu.auth0.com/api/v2/uses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjVCZTlBZFhrMERaUjhmR1dZYjdkViJ9.eyJpc3MiOiJodHRwczovL2twaS5ldS5hdXRoMC5jb20vIiwic3ViIjoiSkl2Q081YzJJQkhsQWUycGF0bjZsNnE1SDM1cXh0aTBAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8va3BpLmV1LmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk1NjcxMjY0LCJleHAiOjE2OTU3NTc2NjQsImF6cCI6IkpJdkNPNWMySUJIbEFlMnBhdG42bDZxNUgzNXF4dGkwIiwic2NvcGUiOiJyZWFkOnVzZXJzIGNyZWF0ZTp1c2VycyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.kwApSXB3jeE7T8xASc72cMIk27C5ciCswFUsoBDyb4BGyD_ioGxtI0u8QXp4-CEambRx9FjzvYlBXBrYEZNRJM-Y6ZnnHZNQsk4dRqFRyzFIKRQdsWeluYGbYyQDYJ2eo9TH-A4HPAMdnSkdhQNniIjXFxAhZbYKKmAV3SpmLSgHxcVRsgJEWxTqDqmKnkRTEuPvfQgUCWbnP4xuMUqEisB5Vw1gY783ba_y5tTRdq7MDRTNkHUgLOe9gwLtZ160BsdGD4Ef3me6cHi2tc9MzW05jE8PlB8UlrE9Nu2Qb_LfRDTBVzmUvWOsJwdaWwqyNb6g8sHxJ2lGpUMkbbgBzw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"pa@gmail.com\",\r\n  \"connection\": \"Username-Password-Authentication\",\r\n  \"password\": \"string123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kpi.eu.auth0.com/api/v2/users",
+					"protocol": "https",
+					"host": [
+						"kpi",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://dev-yztnj-5z.eu.auth0.com/oauth/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "audience",
+							"value": "https://dev-yztnj-5z.eu.auth0.com/api/v2/",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "YLPZLglTAXNugVMYHdylzjIR4KUtIKGR",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "PPy_eRcX9BqP5dx3tqRB9jMcewyhJcCFwsAN3TAKfK7_Ssh1qkAbr0ntz5S5LUZx",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev-yztnj-5z.eu.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"dev-yztnj-5z",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://dev-yztnj-5z.eu.auth0.com/api/v2/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkY0UjAycU1rMzlNdXZLVElCT002MyJ9.eyJpc3MiOiJodHRwczovL2Rldi15enRuai01ei5ldS5hdXRoMC5jb20vIiwic3ViIjoiWUxQWkxnbFRBWE51Z1ZNWUhkeWx6aklSNEtVdElLR1JAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZGV2LXl6dG5qLTV6LmV1LmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk1NjczNzU3LCJleHAiOjE2OTU3NjAxNTcsImF6cCI6IllMUFpMZ2xUQVhOdWdWTVlIZHlsempJUjRLVXRJS0dSIiwic2NvcGUiOiJyZWFkOnVzZXJzIGNyZWF0ZTp1c2VycyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.AiftSixAjCzABvUN-cgDGjPKCLwHXhbWJA9rQYG8j8Lr3JC3BFI-I_2C9_UrZkj6eZ6Mr8LThrRovbnlC9YFgNgekN35QSNcT-REz4XayiLG4hB9286qZceQZrNFskwErnupGwUjlvmmXy88vx6u_C6exxb3fxi4hbD8OEwuNHpnCKn6ukgnAluzRdXjAZUZXDPKukAY_An_O7dwPB-d5lc-RAtfRIrPR0a-jIZgIKlUgDr8L4p2FfTxhDkdWoBDP1kGlzRn5cXnH6aF5RDtvyU36rmpx-J88aTY2jp7ecW9yHdNVitwI6KF2Lu2lP0gYiZ2ZubfR87D0wn9or2U4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"pa@gmail.com\",\r\n  \"connection\": \"Username-Password-Authentication\",\r\n  \"password\": \"string123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev-yztnj-5z.eu.auth0.com/api/v2/users",
+					"protocol": "https",
+					"host": [
+						"dev-yztnj-5z",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
