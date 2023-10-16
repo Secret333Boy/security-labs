@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "7a565b01-ab0d-409a-a754-2b7b654d0200",
+		"name": "security lab3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18988104"
+	},
+	"item": [
+		{
+			"name": "https://kpi.eu.auth0.com/oauth/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "audience",
+							"value": "https://kpi.eu.auth0.com/api/v2/",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "JIvCO5c2IBHlAe2patn6l6q5H35qxti0",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "ZRF8Op0tWM36p1_hxXTU-B0K_Gq_-eAVtlrQpY24CasYiDmcXBhNS6IJMNcz1EgB",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://kpi.eu.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"kpi",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://kpi.eu.auth0.com/authorize?response_type=code&client_id=JIvCO5c2IBHlAe2patn6l6q5H35qxti0&redirect_uri=http://localhost:3000&scope=offline_access",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kpi.eu.auth0.com/authorize?response_type=code&client_id=JIvCO5c2IBHlAe2patn6l6q5H35qxti0&redirect_uri=http://localhost:3000&scope=offline_access",
+					"protocol": "https",
+					"host": [
+						"kpi",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "client_id",
+							"value": "JIvCO5c2IBHlAe2patn6l6q5H35qxti0"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "scope",
+							"value": "offline_access"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://kpi.eu.auth0.com/oauth/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "audience",
+							"value": "https://kpi.eu.auth0.com/api/v2/",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "JIvCO5c2IBHlAe2patn6l6q5H35qxti0",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "ZRF8Op0tWM36p1_hxXTU-B0K_Gq_-eAVtlrQpY24CasYiDmcXBhNS6IJMNcz1EgB",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "dlm_RCqlqzHCyJLPntTB3OTC9HInj-EXGsAT-yIRdSSM7",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://kpi.eu.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"kpi",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://kpi.eu.auth0.com/oauth/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "audience",
+							"value": "https://kpi.eu.auth0.com/api/v2/",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "JIvCO5c2IBHlAe2patn6l6q5H35qxti0",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "ZRF8Op0tWM36p1_hxXTU-B0K_Gq_-eAVtlrQpY24CasYiDmcXBhNS6IJMNcz1EgB",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "RQlznPJWFK7tteYRYZXYCvpvTRi-rH6elVBzlV9VFDwDU",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://kpi.eu.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"kpi",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://dev-yztnj-5z.eu.auth0.com/api/v2/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkY0UjAycU1rMzlNdXZLVElCT002MyJ9.eyJpc3MiOiJodHRwczovL2Rldi15enRuai01ei5ldS5hdXRoMC5jb20vIiwic3ViIjoiWUxQWkxnbFRBWE51Z1ZNWUhkeWx6aklSNEtVdElLR1JAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZGV2LXl6dG5qLTV6LmV1LmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk3NDYwOTg4LCJleHAiOjE2OTc1NDczODgsImF6cCI6IllMUFpMZ2xUQVhOdWdWTVlIZHlsempJUjRLVXRJS0dSIiwic2NvcGUiOiJyZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBjcmVhdGU6dXNlcnMiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.G4VX3PKh9tgpHVjutuOc1z0oOFMtC-Z8t1gzGsWVFw5lSUg3g5nNck6aChW_7PzfmdhflNENYdRwr6gFX7iwByVpBYn5gyp5lJvLwHIJ3_5kpOOTbzPEV3IpoF8pqGOSuFjBzg1CXjwoqjar8IC4Ir60lysIvwMQiI4YtfW07UL-BDxpjL63rLRwR6rnocCfntgByybfs1BiMcrK5YloWmfXl7KwkkzoZc7UIWxcKOQiXTj0-65qrm-LpvxAJ2XCxU8Hj-EB81IotEpKpPmjogBuLLVIuCwom6gRoqFmFAdjQ0whJHDuie7YGKLG5JHhlFeiDx3ZUwWciJniwQ5U9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev-yztnj-5z.eu.auth0.com/api/v2/users",
+					"protocol": "https",
+					"host": [
+						"dev-yztnj-5z",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://dev-yztnj-5z.eu.auth0.com/api/v2/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkY0UjAycU1rMzlNdXZLVElCT002MyJ9.eyJpc3MiOiJodHRwczovL2Rldi15enRuai01ei5ldS5hdXRoMC5jb20vIiwic3ViIjoiWUxQWkxnbFRBWE51Z1ZNWUhkeWx6aklSNEtVdElLR1JAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZGV2LXl6dG5qLTV6LmV1LmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk3NDYwOTg4LCJleHAiOjE2OTc1NDczODgsImF6cCI6IllMUFpMZ2xUQVhOdWdWTVlIZHlsempJUjRLVXRJS0dSIiwic2NvcGUiOiJyZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBjcmVhdGU6dXNlcnMiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.G4VX3PKh9tgpHVjutuOc1z0oOFMtC-Z8t1gzGsWVFw5lSUg3g5nNck6aChW_7PzfmdhflNENYdRwr6gFX7iwByVpBYn5gyp5lJvLwHIJ3_5kpOOTbzPEV3IpoF8pqGOSuFjBzg1CXjwoqjar8IC4Ir60lysIvwMQiI4YtfW07UL-BDxpjL63rLRwR6rnocCfntgByybfs1BiMcrK5YloWmfXl7KwkkzoZc7UIWxcKOQiXTj0-65qrm-LpvxAJ2XCxU8Hj-EB81IotEpKpPmjogBuLLVIuCwom6gRoqFmFAdjQ0whJHDuie7YGKLG5JHhlFeiDx3ZUwWciJniwQ5U9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"1234!5678s!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev-yztnj-5z.eu.auth0.com/api/v2/users/auth0|6512dd3b3c18d7c1827bcf0d",
+					"protocol": "https",
+					"host": [
+						"dev-yztnj-5z",
+						"eu",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"auth0|6512dd3b3c18d7c1827bcf0d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -65,7 +65,7 @@ app.post("/api/login", (req, res) => {
 
   if (user) {
     const token = jwt.sign({ login }, JWT_SECRET, {
-      expiresIn: "30s",
+      expiresIn: "10s",
     });
 
     return res.json({ token });
